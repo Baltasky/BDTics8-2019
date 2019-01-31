@@ -16,5 +16,3 @@ WHERE CustomerID < 313
 SELECT * FROM SalesLT.Customer WHERE CustomerID !> 313
 
 
-
-
