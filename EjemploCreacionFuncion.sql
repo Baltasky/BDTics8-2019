@@ -7,7 +7,7 @@ ALTER FUNCTION GetPrice (@ProductId INT)   --Indicamos que vamos a crear una fun
       DECLARE @price DECIMAL(10,3) --Declaramos una variable para guardar el prec io del producto
 
 
-	SELECT @price = ListPrice FROM SalesLT.Product WHERE ProductId = ProductId -- Seleccionamos el precio de lista del producto y lo guardamos en la variable @price
+	SELECT @price = ListPrice FROM SalesLT.Product WHERE ProductId = @ProductId -- Seleccionamos el precio de lista del producto y lo guardamos en la variable @price
   
     RETURN @price --Retornamos el valor de la variable price
   END 
